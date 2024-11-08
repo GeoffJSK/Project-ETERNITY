@@ -1,19 +1,25 @@
+import math
+
 def gamma_function(n):
-    if type(n) == int and n > 0: #postive int
-        return factorial_function(n)
-    else: # not int
-        return integral(n)
-    return n
+    if n <= 0:
+        return "Undefined" 
+    
+    return factorial_function(n) if type(n) == int else integral(n)
 
-def integeral(n):
-    return (n-1) integral(n-1)
-
+def integral(n):
+    if n == 1:
+        return 1
+    elif n == 0.5:
+        return math.sqrt(math.pi)
+    else:
+        return (n-1) * integral(n-1)
+    
 def factorial_function(n):
     if n == 0 or n == 1:
         return 1
     else:
         return factorial_function(n-1) * n
     
-print(gamma_function(9))
+print(gamma_function(3.5))
 
 #https://www.educba.com/gamma-function-formula/
