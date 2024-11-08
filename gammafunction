@@ -1,0 +1,16 @@
+def gamma_function(n):
+    if type(n) == int and n > 0: #postive int
+        return factorial_function(n)
+    else: # not int
+        n = (n-1) (n-1)
+    return n
+
+def factorial_function(n):
+    if n == 0 or n == 1:
+        return 1
+    else:
+        return factorial_function(n-1) * n
+    
+print(gamma_function(9))
+
+#https://www.educba.com/gamma-function-formula/
