@@ -2,8 +2,11 @@ def gamma_function(n):
     if type(n) == int and n > 0: #postive int
         return factorial_function(n)
     else: # not int
-        n = (n-1) (n-1)
+        return integral(n)
     return n
+
+def integeral(n):
+    return (n-1) integral(n-1)
 
 def factorial_function(n):
     if n == 0 or n == 1:
